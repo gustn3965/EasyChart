@@ -8,16 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		DBCA721F2649704D00EB0B2D /* EasyChart.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCA721D2649704D00EB0B2D /* EasyChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBCA72262649707A00EB0B2D /* EasyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA72252649707A00EB0B2D /* EasyChartView.swift */; };
+		DBCA7228264970D500EB0B2D /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA7227264970D500EB0B2D /* DrawingView.swift */; };
+		DBCA722B2649712800EB0B2D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA722A2649712800EB0B2D /* Model.swift */; };
+		DBCA722D2649714C00EB0B2D /* EasyChartColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA722C2649714C00EB0B2D /* EasyChartColor.swift */; };
+		DBCA722F2649717800EB0B2D /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA722E2649717800EB0B2D /* Box.swift */; };
+		DBCA72372649719400EB0B2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA72362649719400EB0B2D /* AppDelegate.swift */; };
+		DBCA72392649719400EB0B2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA72382649719400EB0B2D /* SceneDelegate.swift */; };
+		DBCA723B2649719400EB0B2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA723A2649719400EB0B2D /* ViewController.swift */; };
+		DBCA723E2649719400EB0B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBCA723C2649719400EB0B2D /* Main.storyboard */; };
+		DBCA72402649719500EB0B2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCA723F2649719500EB0B2D /* Assets.xcassets */; };
+		DBCA72432649719500EB0B2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBCA72412649719500EB0B2D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DBCA721A2649704D00EB0B2D /* EasyChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCA721D2649704D00EB0B2D /* EasyChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyChart.h; sourceTree = "<group>"; };
 		DBCA721E2649704D00EB0B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBCA72252649707A00EB0B2D /* EasyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyChartView.swift; sourceTree = "<group>"; };
+		DBCA7227264970D500EB0B2D /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		DBCA722A2649712800EB0B2D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DBCA722C2649714C00EB0B2D /* EasyChartColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyChartColor.swift; sourceTree = "<group>"; };
+		DBCA722E2649717800EB0B2D /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		DBCA72342649719400EB0B2D /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBCA72362649719400EB0B2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBCA72382649719400EB0B2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DBCA723A2649719400EB0B2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBCA723D2649719400EB0B2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBCA723F2649719500EB0B2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBCA72422649719500EB0B2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBCA72442649719500EB0B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DBCA72172649704D00EB0B2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCA72312649719400EB0B2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -31,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				DBCA721C2649704D00EB0B2D /* EasyChart */,
+				DBCA72352649719400EB0B2D /* DemoApp */,
 				DBCA721B2649704D00EB0B2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				DBCA721A2649704D00EB0B2D /* EasyChart.framework */,
+				DBCA72342649719400EB0B2D /* DemoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,10 +79,45 @@
 		DBCA721C2649704D00EB0B2D /* EasyChart */ = {
 			isa = PBXGroup;
 			children = (
+				DBCA7248264971FD00EB0B2D /* View */,
+				DBCA72292649711B00EB0B2D /* Model */,
 				DBCA721D2649704D00EB0B2D /* EasyChart.h */,
 				DBCA721E2649704D00EB0B2D /* Info.plist */,
 			);
 			path = EasyChart;
+			sourceTree = "<group>";
+		};
+		DBCA72292649711B00EB0B2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBCA722A2649712800EB0B2D /* Model.swift */,
+				DBCA722C2649714C00EB0B2D /* EasyChartColor.swift */,
+				DBCA722E2649717800EB0B2D /* Box.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DBCA72352649719400EB0B2D /* DemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				DBCA72362649719400EB0B2D /* AppDelegate.swift */,
+				DBCA72382649719400EB0B2D /* SceneDelegate.swift */,
+				DBCA723A2649719400EB0B2D /* ViewController.swift */,
+				DBCA723C2649719400EB0B2D /* Main.storyboard */,
+				DBCA723F2649719500EB0B2D /* Assets.xcassets */,
+				DBCA72412649719500EB0B2D /* LaunchScreen.storyboard */,
+				DBCA72442649719500EB0B2D /* Info.plist */,
+			);
+			path = DemoApp;
+			sourceTree = "<group>";
+		};
+		DBCA7248264971FD00EB0B2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBCA72252649707A00EB0B2D /* EasyChartView.swift */,
+				DBCA7227264970D500EB0B2D /* DrawingView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,15 +152,37 @@
 			productReference = DBCA721A2649704D00EB0B2D /* EasyChart.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		DBCA72332649719400EB0B2D /* DemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCA72452649719500EB0B2D /* Build configuration list for PBXNativeTarget "DemoApp" */;
+			buildPhases = (
+				DBCA72302649719400EB0B2D /* Sources */,
+				DBCA72312649719400EB0B2D /* Frameworks */,
+				DBCA72322649719400EB0B2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DemoApp;
+			productName = DemoApp;
+			productReference = DBCA72342649719400EB0B2D /* DemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		DBCA72112649704D00EB0B2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					DBCA72192649704D00EB0B2D = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					DBCA72332649719400EB0B2D = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -111,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				DBCA72192649704D00EB0B2D /* EasyChart */,
+				DBCA72332649719400EB0B2D /* DemoApp */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +214,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBCA72322649719400EB0B2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCA72432649719500EB0B2D /* LaunchScreen.storyboard in Resources */,
+				DBCA72402649719500EB0B2D /* Assets.xcassets in Resources */,
+				DBCA723E2649719400EB0B2D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -130,10 +231,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCA722B2649712800EB0B2D /* Model.swift in Sources */,
+				DBCA72262649707A00EB0B2D /* EasyChartView.swift in Sources */,
+				DBCA722D2649714C00EB0B2D /* EasyChartColor.swift in Sources */,
+				DBCA7228264970D500EB0B2D /* DrawingView.swift in Sources */,
+				DBCA722F2649717800EB0B2D /* Box.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCA72302649719400EB0B2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCA723B2649719400EB0B2D /* ViewController.swift in Sources */,
+				DBCA72372649719400EB0B2D /* AppDelegate.swift in Sources */,
+				DBCA72392649719400EB0B2D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DBCA723C2649719400EB0B2D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBCA723D2649719400EB0B2D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DBCA72412649719500EB0B2D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBCA72422649719500EB0B2D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DBCA72202649704D00EB0B2D /* Debug */ = {
@@ -188,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -246,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -261,6 +396,7 @@
 		DBCA72232649704D00EB0B2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WVLV77R6X7;
@@ -269,14 +405,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EasyChart/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyunsu.park.EasyChart;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +424,7 @@
 		DBCA72242649704D00EB0B2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WVLV77R6X7;
@@ -293,14 +433,56 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EasyChart/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyunsu.park.EasyChart;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DBCA72462649719500EB0B2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WVLV77R6X7;
+				INFOPLIST_FILE = DemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyunsu.park.DemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBCA72472649719500EB0B2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WVLV77R6X7;
+				INFOPLIST_FILE = DemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyunsu.park.DemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,6 +505,15 @@
 			buildConfigurations = (
 				DBCA72232649704D00EB0B2D /* Debug */,
 				DBCA72242649704D00EB0B2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBCA72452649719500EB0B2D /* Build configuration list for PBXNativeTarget "DemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCA72462649719500EB0B2D /* Debug */,
+				DBCA72472649719500EB0B2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
