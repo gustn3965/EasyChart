@@ -34,12 +34,15 @@ Or you can just make ``Object`` already made in project conforming ``EasyChartOb
 
 then just create EasyChartView with data. 
 - you can set frame or constraint. 
+- you can set normal chart color, touched chart color with ``UIColor`` you want   by creating ``EasyChartColor``. 
 
 ```swift 
 import EasyChart 
 ...
 let data: [EasyChartObjectProtocol] = [] 
 let easyChartView = EasyChartView(objects: data )
+let easyChartView = EasyChartView(frame: CGRect.zero, objects: data )
+let easyChartView = EasyChartView(frame: CGRect.zero, objects: data, color: EasyChartColor() )
 ...
 view.addSubview(easyChartView)
 ```
