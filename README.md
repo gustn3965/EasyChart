@@ -1,3 +1,8 @@
+![SwiftVersion](https://img.shields.io/badge/swift-5.0-red)
+![iOSVersion](https://img.shields.io/badge/iOS-13.0-blue)
+[![Version](https://img.shields.io/cocoapods/v/EasyChart.svg?style=flat)](https://cocoapods.org/pods/EasyChart)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 # Purpose 
 To get simple chart view easily.
 You can drag on chart in order to see specific data.
