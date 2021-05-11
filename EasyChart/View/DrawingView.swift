@@ -90,6 +90,24 @@ final public class DrawingView: UIView {
     
     // MARK: - Chart 그려주는 메서드
     
+    
+    public func drawBarChart() {
+        guard let MIN = minValue, let MAX = maxValue else { return }
+        let path = UIBezierPath()
+        let width = frame.width/CGFloat(objects.count)/2
+
+        var wid = width
+        let lineWidth = wid
+        for i in 0..<objects.count {
+            path.move(to: CGPoint(x: wid, y: frame.height))
+            let value = frame.height-(frame.height*(objects[i].value-MIN)/(MAX))
+            path.addLine(to: CGPoint(x: wid, y: value))
+            wid += width*2
+        }
+        shapeLayer.lineWidth = lineWidth
+        shapeLayer.add(animation, forKey: key)
+    }
+    
     /// Chart 그려주는 메서드
     public func drawChart() {
         guard let MIN = minValue, let MAX = maxValue else { return }
