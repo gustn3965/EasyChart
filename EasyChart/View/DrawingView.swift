@@ -45,14 +45,15 @@ final public class DrawingView: UIView {
     ///   - objects: 차트를 표현하기 위한 데이터 배열
     ///   - showImmediately: 초기화하고 바로 나타날지 결정
     ///   - color: 차트색을 나타내는 객체
-    public init(objects: [EasyChartObjectProtocol],
+    public init(frame: CGRect = .zero,
+                objects: [EasyChartObjectProtocol],
                 showImmediately: Bool = true,
                 color: EasyChartColor = EasyChartColor(chartColor: #colorLiteral(red: 0.83, green: 0.25, blue: 0.00, alpha: 1.00),
                                                        touchedChartColor: #colorLiteral(red: 0.22, green: 0.24, blue: 0.27, alpha: 1.00))) {
         self.objects = objects
         self.isShowingImmediately = showImmediately
         self.color = color
-        super.init(frame: CGRect.zero)
+        super.init(frame: frame)
         caculateMinMax(objects)
         setUp()
     }
