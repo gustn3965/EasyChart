@@ -33,7 +33,10 @@ final public class EasyChartView: UIView {
                 showImmediately: Bool = true,
                 color: EasyChartColor = EasyChartColor(chartColor: #colorLiteral(red: 0.83, green: 0.25, blue: 0.00, alpha: 1.00),
                                                        touchedChartColor: #colorLiteral(red: 0.22, green: 0.24, blue: 0.27, alpha: 1.00))) {
-        chartView = DrawingView(objects: objects)
+        chartView = DrawingView(frame: frame,
+                                objects: objects,
+                                showImmediately: showImmediately,
+                                color: color )
         super.init(frame: frame)
         setUI()
         addConstraint()
