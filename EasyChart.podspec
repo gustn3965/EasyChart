@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.homepage     = "https://github.com/gustn3965/EasyChart"
 
-  spec.license      = "Apache License, Version 2.0"
+  spec.license      = "MIT"
   spec.author             = { "gustn3965" => "gustn3965@gmail.com" }
   spec.platform     = :ios, "13.0"
   spec.source       = { :git => "https://github.com/gustn3965/EasyChart.git", :tag => "#{spec.version}" }
