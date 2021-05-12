@@ -8,7 +8,7 @@
 import UIKit
 
 /// BarChart 그려주는 객체
-final class BarChart: UIView, ChartProtocol {
+public final class BarChart: UIView, ChartProtocol {
     var shapeLayers: ChartShapeLayer
     var property: ChartProperty
     var valueBox: Box = Box()
@@ -27,7 +27,7 @@ final class BarChart: UIView, ChartProtocol {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         if property.isShowingImmediately {
             drawChart()
         }

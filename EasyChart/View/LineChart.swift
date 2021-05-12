@@ -8,7 +8,7 @@
 import UIKit
 
 /// LineChart 그려주는 객체
-class LineChart: UIView, ChartProtocol {
+public final class LineChart: UIView, ChartProtocol {
     var shapeLayers: ChartShapeLayer
     var property: ChartProperty
     var valueBox: Box = Box()
@@ -22,7 +22,7 @@ class LineChart: UIView, ChartProtocol {
         setUp()
     }
 
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         if property.isShowingImmediately {
             drawChart()
         }
