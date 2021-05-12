@@ -8,7 +8,7 @@
 import UIKit
 
 /// BarChart 그려주는 객체
-public final class BarChart: UIView, ChartProtocol {
+final class BarChart: UIView, ChartProtocol {
     var shapeLayers: ChartShapeLayer
     var property: ChartProperty
     var valueBox: Box = Box()

@@ -8,7 +8,7 @@
 import UIKit
 
 /// LineChart 그려주는 객체
-public final class LineChart: UIView, ChartProtocol {
+final class LineChart: UIView, ChartProtocol {
     var shapeLayers: ChartShapeLayer
     var property: ChartProperty
     var valueBox: Box = Box()
