@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB26A5BB264ACBB400CDABAB /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26A5BA264ACBB400CDABAB /* LineChart.swift */; };
+		DB26A5BD264ACCD800CDABAB /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26A5BC264ACCD800CDABAB /* BarChart.swift */; };
+		DBA745D1264BF68900486DAE /* ChartProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA745D0264BF68900486DAE /* ChartProperty.swift */; };
+		DBA745D3264BF6B700486DAE /* ChartShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA745D2264BF6B700486DAE /* ChartShapeLayer.swift */; };
+		DBA745D5264BF7C800486DAE /* FactoryChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA745D4264BF7C800486DAE /* FactoryChart.swift */; };
+		DBA745D8264BF83E00486DAE /* ChartProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA745D7264BF83E00486DAE /* ChartProtocol.swift */; };
+		DBA745DA264BF87B00486DAE /* TouchedChartProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA745D9264BF87B00486DAE /* TouchedChartProtocol.swift */; };
+		DBA745DC264BF92600486DAE /* EasyChartObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA745DB264BF92600486DAE /* EasyChartObjectProtocol.swift */; };
+		DBA745DF264C062600486DAE /* EasyChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCA721A2649704D00EB0B2D /* EasyChart.framework */; };
+		DBA745E0264C062600486DAE /* EasyChart.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCA721A2649704D00EB0B2D /* EasyChart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBCA721F2649704D00EB0B2D /* EasyChart.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCA721D2649704D00EB0B2D /* EasyChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DBCA72262649707A00EB0B2D /* EasyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA72252649707A00EB0B2D /* EasyChartView.swift */; };
-		DBCA7228264970D500EB0B2D /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA7227264970D500EB0B2D /* DrawingView.swift */; };
 		DBCA722B2649712800EB0B2D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA722A2649712800EB0B2D /* Model.swift */; };
 		DBCA722D2649714C00EB0B2D /* EasyChartColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA722C2649714C00EB0B2D /* EasyChartColor.swift */; };
 		DBCA722F2649717800EB0B2D /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA722E2649717800EB0B2D /* Box.swift */; };
@@ -21,12 +30,43 @@
 		DBCA72432649719500EB0B2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBCA72412649719500EB0B2D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DBA745E1264C062700486DAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBCA72112649704D00EB0B2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBCA72192649704D00EB0B2D;
+			remoteInfo = EasyChart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBA745E3264C062700486DAE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DBA745E0264C062600486DAE /* EasyChart.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DB26A5BA264ACBB400CDABAB /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		DB26A5BC264ACCD800CDABAB /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		DBA745D0264BF68900486DAE /* ChartProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartProperty.swift; sourceTree = "<group>"; };
+		DBA745D2264BF6B700486DAE /* ChartShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartShapeLayer.swift; sourceTree = "<group>"; };
+		DBA745D4264BF7C800486DAE /* FactoryChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryChart.swift; sourceTree = "<group>"; };
+		DBA745D7264BF83E00486DAE /* ChartProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartProtocol.swift; sourceTree = "<group>"; };
+		DBA745D9264BF87B00486DAE /* TouchedChartProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchedChartProtocol.swift; sourceTree = "<group>"; };
+		DBA745DB264BF92600486DAE /* EasyChartObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyChartObjectProtocol.swift; sourceTree = "<group>"; };
 		DBCA721A2649704D00EB0B2D /* EasyChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCA721D2649704D00EB0B2D /* EasyChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyChart.h; sourceTree = "<group>"; };
 		DBCA721E2649704D00EB0B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBCA72252649707A00EB0B2D /* EasyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyChartView.swift; sourceTree = "<group>"; };
-		DBCA7227264970D500EB0B2D /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		DBCA722A2649712800EB0B2D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DBCA722C2649714C00EB0B2D /* EasyChartColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyChartColor.swift; sourceTree = "<group>"; };
 		DBCA722E2649717800EB0B2D /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
@@ -52,18 +92,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA745DF264C062600486DAE /* EasyChart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DBA745C8264BEEC500486DAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBA745D6264BF83300486DAE /* ChartProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				DBA745D7264BF83E00486DAE /* ChartProtocol.swift */,
+				DBA745D9264BF87B00486DAE /* TouchedChartProtocol.swift */,
+				DBA745DB264BF92600486DAE /* EasyChartObjectProtocol.swift */,
+			);
+			name = ChartProtocol;
+			sourceTree = "<group>";
+		};
 		DBCA72102649704D00EB0B2D = {
 			isa = PBXGroup;
 			children = (
 				DBCA721C2649704D00EB0B2D /* EasyChart */,
 				DBCA72352649719400EB0B2D /* DemoApp */,
 				DBCA721B2649704D00EB0B2D /* Products */,
+				DBA745C8264BEEC500486DAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,8 +138,9 @@
 		DBCA721C2649704D00EB0B2D /* EasyChart */ = {
 			isa = PBXGroup;
 			children = (
-				DBCA7248264971FD00EB0B2D /* View */,
+				DBA745D6264BF83300486DAE /* ChartProtocol */,
 				DBCA72292649711B00EB0B2D /* Model */,
+				DBCA7248264971FD00EB0B2D /* View */,
 				DBCA721D2649704D00EB0B2D /* EasyChart.h */,
 				DBCA721E2649704D00EB0B2D /* Info.plist */,
 			);
@@ -93,6 +153,9 @@
 				DBCA722A2649712800EB0B2D /* Model.swift */,
 				DBCA722C2649714C00EB0B2D /* EasyChartColor.swift */,
 				DBCA722E2649717800EB0B2D /* Box.swift */,
+				DBA745D0264BF68900486DAE /* ChartProperty.swift */,
+				DBA745D2264BF6B700486DAE /* ChartShapeLayer.swift */,
+				DBA745D4264BF7C800486DAE /* FactoryChart.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -115,7 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				DBCA72252649707A00EB0B2D /* EasyChartView.swift */,
-				DBCA7227264970D500EB0B2D /* DrawingView.swift */,
+				DB26A5BA264ACBB400CDABAB /* LineChart.swift */,
+				DB26A5BC264ACCD800CDABAB /* BarChart.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,10 +223,12 @@
 				DBCA72302649719400EB0B2D /* Sources */,
 				DBCA72312649719400EB0B2D /* Frameworks */,
 				DBCA72322649719400EB0B2D /* Resources */,
+				DBA745E3264C062700486DAE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DBA745E2264C062700486DAE /* PBXTargetDependency */,
 			);
 			name = DemoApp;
 			productName = DemoApp;
@@ -231,11 +297,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB26A5BD264ACCD800CDABAB /* BarChart.swift in Sources */,
 				DBCA722B2649712800EB0B2D /* Model.swift in Sources */,
 				DBCA72262649707A00EB0B2D /* EasyChartView.swift in Sources */,
+				DBA745D3264BF6B700486DAE /* ChartShapeLayer.swift in Sources */,
 				DBCA722D2649714C00EB0B2D /* EasyChartColor.swift in Sources */,
-				DBCA7228264970D500EB0B2D /* DrawingView.swift in Sources */,
+				DBA745DC264BF92600486DAE /* EasyChartObjectProtocol.swift in Sources */,
+				DBA745DA264BF87B00486DAE /* TouchedChartProtocol.swift in Sources */,
+				DBA745D1264BF68900486DAE /* ChartProperty.swift in Sources */,
+				DB26A5BB264ACBB400CDABAB /* LineChart.swift in Sources */,
 				DBCA722F2649717800EB0B2D /* Box.swift in Sources */,
+				DBA745D5264BF7C800486DAE /* FactoryChart.swift in Sources */,
+				DBA745D8264BF83E00486DAE /* ChartProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +323,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBA745E2264C062700486DAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBCA72192649704D00EB0B2D /* EasyChart */;
+			targetProxy = DBA745E1264C062700486DAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DBCA723C2649719400EB0B2D /* Main.storyboard */ = {
@@ -411,7 +492,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyunsu.park.EasyChart;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -439,7 +520,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyunsu.park.EasyChart;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

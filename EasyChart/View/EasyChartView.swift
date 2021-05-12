@@ -8,10 +8,13 @@
 import UIKit
 
 
-/// chartView와 데이터의 값을 나타내는 2개의 Label을 갖는 View
+/// chartView와 데이터의 값을 나타내기 위한 2개의 Label을 갖는 View
+/// - chartView: 차트뷰
+/// - valueLabel: 뷰좌측상단에 나타나는 label
+/// - rowLabel: 뷰우측상단에 나타나는 label
 final public class EasyChartView: UIView {
     
-    public var chartView: DrawingView
+    var chartView: ChartProtocol
     private var stackView:  UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -29,14 +32,14 @@ final public class EasyChartView: UIView {
     ///   - showImmediately: 초기화하고 바로 나타날지 결정
     ///   - color: 차트색을 나타내는 객체
     public init(frame: CGRect = .zero,
+                chart: FactoryChart = .lineChart,
                 objects: [EasyChartObjectProtocol],
                 showImmediately: Bool = true,
                 color: EasyChartColor = EasyChartColor(chartColor: #colorLiteral(red: 0.83, green: 0.25, blue: 0.00, alpha: 1.00),
                                                        touchedChartColor: #colorLiteral(red: 0.22, green: 0.24, blue: 0.27, alpha: 1.00))) {
-        chartView = DrawingView(frame: frame,
-                                objects: objects,
-                                showImmediately: showImmediately,
-                                color: color )
+        let context = ChartProperty(frame: frame, objects: objects, isShowingImmediately: showImmediately, color: color)
+        chartView = chart.initChartViewBy(context)
+        
         super.init(frame: frame)
         setUI()
         addConstraint()
@@ -90,5 +93,44 @@ final public class EasyChartView: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: - Convenient 메소드 및 프로퍼티
+extension EasyChartView {
+
+    /// 차트 타입에 따라 차트 그려준다.
+    public func drawChart() {
+        chartView.drawChart()
+    }
+    
+    /// 차트 데이터 - get set
+    public var objects: [EasyChartObjectProtocol] {
+        get {
+            return chartView.property.objects
+        }
+        set {
+            chartView.property.objects = newValue
+        }
+    }
+    
+    /// 기본차트 색 - get set
+    public var chartColor: UIColor {
+        get {
+            return chartView.property.color.chartColor
+        }
+        set {
+            return chartView.property.color.chartColor = newValue
+        }
+    }
+    
+    /// 터치된 차트 색 - get set
+    public var touchedChartColor: UIColor {
+        get {
+            return chartView.property.color.touchedChartColor
+        }
+        set {
+            return chartView.property.color.touchedChartColor = newValue
+        }
     }
 }
