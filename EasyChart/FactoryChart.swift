@@ -5,7 +5,7 @@
 //  Created by hyunsu on 2021/05/12.
 //
 
-import Foundation
+import UIKit
 
 /// 특정 Chart로 객체만들어주는 팩토리객체
 public enum FactoryChart {
