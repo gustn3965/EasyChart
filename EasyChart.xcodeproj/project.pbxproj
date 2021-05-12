@@ -116,6 +116,16 @@
 			name = ChartProtocol;
 			sourceTree = "<group>";
 		};
+		DBA745E9264C102900486DAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBCA72252649707A00EB0B2D /* EasyChartView.swift */,
+				DB26A5BA264ACBB400CDABAB /* LineChart.swift */,
+				DB26A5BC264ACCD800CDABAB /* BarChart.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		DBCA72102649704D00EB0B2D = {
 			isa = PBXGroup;
 			children = (
@@ -138,9 +148,9 @@
 		DBCA721C2649704D00EB0B2D /* EasyChart */ = {
 			isa = PBXGroup;
 			children = (
+				DBA745E9264C102900486DAE /* View */,
 				DBA745D6264BF83300486DAE /* ChartProtocol */,
 				DBCA72292649711B00EB0B2D /* Model */,
-				DBCA7248264971FD00EB0B2D /* View */,
 				DBCA721D2649704D00EB0B2D /* EasyChart.h */,
 				DBCA721E2649704D00EB0B2D /* Info.plist */,
 			);
@@ -172,16 +182,6 @@
 				DBCA72442649719500EB0B2D /* Info.plist */,
 			);
 			path = DemoApp;
-			sourceTree = "<group>";
-		};
-		DBCA7248264971FD00EB0B2D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DBCA72252649707A00EB0B2D /* EasyChartView.swift */,
-				DB26A5BA264ACBB400CDABAB /* LineChart.swift */,
-				DB26A5BC264ACCD800CDABAB /* BarChart.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,7 +492,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.2;
+				MARKETING_VERSION = 0.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyunsu.park.EasyChart;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -520,7 +520,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.2;
+				MARKETING_VERSION = 0.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyunsu.park.EasyChart;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
