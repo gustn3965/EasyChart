@@ -7,11 +7,10 @@
 
 import UIKit
 
-
-/// chartView와 데이터의 값을 나타내기 위한 2개의 Label을 갖는 View
-/// - chartView: 차트뷰
-/// - valueLabel: 뷰좌측상단에 나타나는 label
-/// - rowLabel: 뷰우측상단에 나타나는 label
+/// View that has `chartView` and `2 labels` to show value and row
+/// - chartView:  chart
+/// - valueLabel: label to show value in `top left`
+/// - rowLabel: label to show row in `top right.
 final public class EasyChartView: UIView {
     
     var chartView: ChartProtocol
@@ -25,12 +24,12 @@ final public class EasyChartView: UIView {
     public var rowLabel = UILabel()
     
     // MARK: - init Method
-    /// Drawing 초기화하는 메서드
     /// - Parameters:
     ///   - frame: CGRect
-    ///   - objects: 차트를 표현하기 위한 데이터 배열( EasyChartObjectProtocol을 채택해야한다 )
-    ///   - showImmediately: 초기화하고 바로 나타날지 결정
-    ///   - color: 차트색을 나타내는 객체
+    ///   - chart: One of chart - `.lineChart` or `.barChart`
+    ///   - objects: Data to be represented by chart ( should be conforming `EasyChartObjectProtocol` )
+    ///   - showImmediately: Whether to be showed immediately after intialized
+    ///   - color: colors to be applied in chart color
     public init(frame: CGRect = .zero,
                 chart: FactoryChart = .lineChart,
                 objects: [EasyChartObjectProtocol],
@@ -96,15 +95,15 @@ final public class EasyChartView: UIView {
     }
 }
 
-// MARK: - Convenient 메소드 및 프로퍼티
+// MARK: - Conveninet method and properties
 extension EasyChartView {
 
-    /// 차트 타입에 따라 차트 그려준다.
+    /// Draw depending on chart
     public func drawChart() {
         chartView.drawChart()
     }
     
-    /// 차트 데이터 - get set
+    /// Data objests to be presented in chart.
     public var objects: [EasyChartObjectProtocol] {
         get {
             return chartView.property.objects
@@ -114,7 +113,7 @@ extension EasyChartView {
         }
     }
     
-    /// 기본차트 색 - get set
+    /// Normal chart color
     public var chartColor: UIColor {
         get {
             return chartView.property.color.chartColor
@@ -124,7 +123,7 @@ extension EasyChartView {
         }
     }
     
-    /// 터치된 차트 색 - get set
+    /// Touched chart color
     public var touchedChartColor: UIColor {
         get {
             return chartView.property.color.touchedChartColor

@@ -7,13 +7,13 @@
 
 import UIKit
 
-/// 특정 Chart로 객체만들어주는 팩토리객체
+/// Factory chart is to make `specific chart`
 public enum FactoryChart {
 
     case barChart
     case lineChart
     
-    /// Chart 타입에 따라 객체 생성
+    /// To make `chart instant` by chart type.
     func initChartViewBy(_ context: ChartProperty) -> ChartProtocol {
         switch self {
         case .barChart:

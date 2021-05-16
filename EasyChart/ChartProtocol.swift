@@ -6,7 +6,7 @@
 //
 
 import UIKit
-/// 차트를 나타내기 위한 프로퍼티 및 메서드정의
+/// protocol to define properties needed to represent chart
 protocol ChartProtocol where Self: UIView {
 
     var property: ChartProperty { get set }

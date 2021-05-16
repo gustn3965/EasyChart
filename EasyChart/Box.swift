@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// 차트를 터치했을때, 데이터들의 값을 전달하기 위한 객체
+/// Box is to publish value to observer when chart is touched.
 final public class Box {
     var value: String? {
         didSet {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// EasyChartObjectProtocol을 채택했으며, 기본 데이터 타입
+/// Struct  conforming `EasyChartObjectProtcol` is used to show dara in chart.  You can use this Object instead of implementing other struct or class conforming EasyChartObjectProtocol.
 public struct Object: EasyChartObjectProtocol {
     public var value: CGFloat
     public var row: String?

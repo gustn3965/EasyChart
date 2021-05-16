@@ -6,17 +6,18 @@
 //
 
 import UIKit
-/// Touch됐을때 행할 메서드정의
+
+/// protocol to define method when touched
 protocol TouchedChartProtocol {
-    /// 터치했을때 각 높이에 포인트를 그리는 메서드
+    /// Draw `point` at each height when touched
     func drawPointWhenTouched(x:CGFloat, idx: Int, wid: CGFloat)
 }
 
-/// 미리 구현한 메서드
+// Already implemented method
 extension TouchedChartProtocol where Self: ChartProtocol {
     
-    /// 터치했을때 gesture를 상태에 따라 분기하는 메서드
-    internal func convertGesture(_ gesture: UILongPressGestureRecognizer) {
+    /// Handle depending on touch gesture
+    internal func handleGesture(_ gesture: UILongPressGestureRecognizer) {
         switch gesture.state {
         case .began:
             shapeLayers.defaultLayer.strokeColor = property.color.touchedChartColor.cgColor
@@ -31,7 +32,7 @@ extension TouchedChartProtocol where Self: ChartProtocol {
         }
     }
 
-    /// Touch했을때 부각시키기위해 Line, Circle 호출하여 그리는 메서드
+    /// Draw `Line` and `Point` when chart is touched
     internal func drawWhenTouched(gesture: UILongPressGestureRecognizer ) {
         let location = gesture.location(in: self)
         let width = frame.width/CGFloat(property.objects.count)/2
@@ -51,7 +52,7 @@ extension TouchedChartProtocol where Self: ChartProtocol {
         }
     }
 
-    /// 터치된곳에 1자로 그려주는 메서드
+    /// Draw `Line vertical` when chart is touched
     internal func drawLineWhenTouched(x: CGFloat) {
         let linePath = UIBezierPath()
         linePath.move(to: CGPoint(x: x, y: 0))

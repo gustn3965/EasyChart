@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// LineChart 그려주는 객체
+/// View is to draw `line-chart`
 final class LineChart: UIView, ChartProtocol {
     var shapeLayers: ChartShapeLayer
     var property: ChartProperty
@@ -44,8 +44,8 @@ final class LineChart: UIView, ChartProtocol {
         addTouchGesture()
     }
 
-    // MARK: - 차트 그려주는 메소드
-    /// line chart를 그려준다.
+    // MARK: - Method to draw chart
+    /// Draw `line-chart`
     func drawChart() {
         guard let MIN = property.minValue, let MAX = property.maxValue else { return }
         shapeLayers.setLayerColor(property.color)
@@ -66,25 +66,24 @@ final class LineChart: UIView, ChartProtocol {
         shapeLayers.defaultLayer.add(shapeLayers.animation, forKey: property.key)
     }
 
-    /// touch gesture 등록후,  detectTouch(gessture:) 호출한다.
-    /// detectTouch(gesture:)는 TouchedChartProtocol에 구현되어있다.
+    /// Add touch gesture calling `detectTouch(gesture:)`
     private func addTouchGesture() {
         let gesture = UILongPressGestureRecognizer(target: self, action: #selector(detectTouch(gesture:)))
         gesture.minimumPressDuration = 0.2
         addGestureRecognizer(gesture)
     }
     
-    /// touch gesture를 해석하기 위해 `convertGesture(:)` 메소드를 호출한다.
-    /// convertGesture(:)는 `TouchedChartProtocol`에 구현되어있다.
+    /// Detect touch gesture calling `convertGesture(:)`
+    /// convertGesture(:) is implemented in `TocuhedChartProtocol`
     @objc private func detectTouch(gesture: UILongPressGestureRecognizer) {
-        convertGesture(gesture)
+        handleGesture(gesture)
     }
 }
 
-// MARK: - TouchedChartProtocol 채택
+// MARK: - Conforming TouchedChartProtocol 
 extension LineChart: TouchedChartProtocol {
 
-    /// 각 높이마다 원을 그려준다.
+    /// Draw `circle-point` at each height when touched
     func drawPointWhenTouched(x: CGFloat, idx: Int, wid: CGFloat) {
         guard let MIN = property.minValue , let MAX = property.maxValue else { return }
         let value = frame.height-(frame.height*(property.objects[idx].value-MIN)/(MAX))

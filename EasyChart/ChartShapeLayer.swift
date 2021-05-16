@@ -7,11 +7,11 @@
 
 import UIKit
 
-/// Chart가 가져야할 CAShapeLayer를 구성하는 객체
-/// - defaultLayer:  기본 차트를 그려주는 Layer
-/// - touchShapeLayer: 터치된후 수직으로 직선 그려주는 Layer
-/// - touchPointShapeLayer: 터치된 후 각 높이마다 포인트 그려주는 Layer
-class ChartShapeLayer {
+///  Struct is Having CAShapeLayer properties to draw in chart. Chart should have this class.
+/// - defaultLayer:  To draw default chart.
+/// - touchShapeLayer: To draw line-vertical chart when touched
+/// - touchPointShapeLayer: To draw point chart when touched
+struct ChartShapeLayer {
     let defaultLayer = CAShapeLayer()
     var touchShapeLayer = CAShapeLayer()
     var touchPointShapeLayer = CAShapeLayer()
@@ -28,7 +28,7 @@ class ChartShapeLayer {
         setLayerColor(color)
     }
     
-    func setLayerColor(_ color: EasyChartColor) {
+    mutating func setLayerColor(_ color: EasyChartColor) {
         defaultLayer.strokeColor = color.chartColor.cgColor
         defaultLayer.fillColor = UIColor.clear.cgColor
         touchShapeLayer.strokeColor = color.touchedChartColor.cgColor

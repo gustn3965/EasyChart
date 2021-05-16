@@ -19,6 +19,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setLineChartViewWithConstraint()
         setBarChartViewWithConstraint()
+        printSwift()
+        
+    }
+    func printSwift() {
+        #if swift(>=5.4)
+            print("5.4")
+        #elseif swift(>=5.3)
+           print("not 5.3")
+        #endif
     }
     
     func setLineChartViewWithConstraint() {

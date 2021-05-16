@@ -7,14 +7,14 @@
 
 import UIKit
 
-/// 차트의 기본색과 터치했을때 변하는 색을 담는 객체
+/// ChartColors are both chartColor and TouchedChartColor.
 public struct EasyChartColor {
     var chartColor: UIColor
     var touchedChartColor: UIColor
     
     /// - Parameters:
-    ///   - chartColor: 차트의 기본색
-    ///   - touchedChartColor: 터치했을때 변하는 색
+    ///   - chartColor: default char color
+    ///   - touchedChartColor: chart color when touched
     public init(chartColor: UIColor,
                 touchedChartColor: UIColor) {
         self.chartColor = chartColor

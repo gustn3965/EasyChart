@@ -7,9 +7,7 @@
 
 import UIKit
 
-/// Chart가 가져야할 프로퍼티들 객체
-/// - objects: 차트를 그리기위한 데이터배열
-/// - color: 차트의 색을 나타내기 위한 객체
+/// Chart should have this struct. this struct is having necessary properties.
 struct ChartProperty {
     var frame: CGRect
     var objects: [EasyChartObjectProtocol]
