@@ -41,6 +41,8 @@ then just create EasyChartView with data.
 chart default is ``.lineChart``, so if you want Bar-chart , you just set ``.barChart`` in inlitialize
 - you can set frame or constraint. 
 - you can set normal chart color, touched chart color with ``UIColor`` you want   by creating ``EasyChartColor``. 
+- if you want chart not to be animated, set false in ``isAnimated`` in ``EasyChartView initializer``. Default is ``true``.
+
 
 ```swift 
 import EasyChart 
@@ -50,6 +52,7 @@ let easyChartView = EasyChartView(objects: data )
 let easyChartView = EasyChartView(frame: CGRect.zero, chart: .barChart, objects: data )
 let easyChartView = EasyChartView(frame: CGRect.zero, objects: data )
 let easyChartView = EasyChartView(frame: CGRect.zero, objects: data, color: EasyChartColor() )
+let easyLineChartView = EasyChartView(objects: data, isAnimated: false)
 ...
 view.addSubview(easyChartView)
 ```

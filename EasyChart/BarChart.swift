@@ -22,28 +22,27 @@ final class BarChart: UIView, ChartProtocol {
         clipsToBounds = true
         setUp()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     public override func draw(_ rect: CGRect) {
-        if property.isShowingImmediately {
-            drawChart()
-        }
+        drawChart()
+        
     }
-
+    
     private func setUp() {
         shapeLayers.defaultLayer.lineCap = .square
         shapeLayers.defaultLayer.lineJoin = .bevel
-      
+        
         layer.addSublayer(shapeLayers.defaultLayer)
         layer.addSublayer(shapeLayers.touchShapeLayer)
         layer.addSublayer(shapeLayers.touchPointShapeLayer)
         
         addTouchDelegate()
     }
-
+    
     // MARK: - Method to draw chart
     /// Draw `line-chart`
     func drawChart() {
@@ -52,7 +51,7 @@ final class BarChart: UIView, ChartProtocol {
         let path = UIBezierPath()
         let width = frame.width/CGFloat(property.objects.count)/2
         var wid = width
-
+        
         for i in 0..<property.objects.count {
             path.move(to: CGPoint(x: wid, y: frame.height))
             let value = frame.height-(frame.height*(property.objects[i].value-MIN)/(MAX))
@@ -63,7 +62,9 @@ final class BarChart: UIView, ChartProtocol {
         }
         shapeLayers.defaultLayer.lineWidth = width
         shapeLayers.defaultLayer.path = path.cgPath
-        shapeLayers.defaultLayer.add(shapeLayers.animation, forKey: property.key)
+        if property.isAnimated {
+            shapeLayers.defaultLayer.add(shapeLayers.animation, forKey: property.key)
+        }
     }
     
     /// Add touch gesture calling `detectTouch(gesture:)`
@@ -82,13 +83,13 @@ final class BarChart: UIView, ChartProtocol {
 
 // MARK: - Conforming TouchedChartProtocol 
 extension BarChart: TouchedChartProtocol {
-
+    
     /// Draw `rectangle-point` at each height when touched
     func drawPointWhenTouched(x: CGFloat, idx: Int, wid: CGFloat) {
         guard let MIN = property.minValue , let MAX = property.maxValue else { return }
         let value = frame.height-(frame.height*(property.objects[idx].value-MIN)/(MAX))
         let square = UIBezierPath(rect: CGRect(x: x-wid/2, y: value-wid/2, width: wid, height: wid))
-
+        
         shapeLayers.touchPointShapeLayer.path = square.cgPath
     }
 }

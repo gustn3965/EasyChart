@@ -28,15 +28,15 @@ final public class EasyChartView: UIView {
     ///   - frame: CGRect
     ///   - chart: One of chart - `.lineChart` or `.barChart`
     ///   - objects: Data to be represented by chart ( should be conforming `EasyChartObjectProtocol` )
-    ///   - showImmediately: Whether to be showed immediately after intialized
+    ///   - isAnimated: Whether to be showe chart being animated
     ///   - color: colors to be applied in chart color
     public init(frame: CGRect = .zero,
                 chart: FactoryChart = .lineChart,
                 objects: [EasyChartObjectProtocol],
-                showImmediately: Bool = true,
+                isAnimated: Bool = true,
                 color: EasyChartColor = EasyChartColor(chartColor: #colorLiteral(red: 0.83, green: 0.25, blue: 0.00, alpha: 1.00),
                                                        touchedChartColor: #colorLiteral(red: 0.22, green: 0.24, blue: 0.27, alpha: 1.00))) {
-        let context = ChartProperty(frame: frame, objects: objects, isShowingImmediately: showImmediately, color: color)
+        let context = ChartProperty(frame: frame, objects: objects, isAnimated: isAnimated, color: color)
         chartView = chart.initChartViewBy(context)
         
         super.init(frame: frame)
@@ -98,11 +98,6 @@ final public class EasyChartView: UIView {
 // MARK: - Conveninet method and properties
 extension EasyChartView {
 
-    /// Draw depending on chart
-    public func drawChart() {
-        chartView.drawChart()
-    }
-    
     /// Data objests to be presented in chart.
     public var objects: [EasyChartObjectProtocol] {
         get {
@@ -110,6 +105,7 @@ extension EasyChartView {
         }
         set {
             chartView.property.objects = newValue
+            chartView.setNeedsDisplay()
         }
     }
     
@@ -119,7 +115,8 @@ extension EasyChartView {
             return chartView.property.color.chartColor
         }
         set {
-            return chartView.property.color.chartColor = newValue
+            chartView.property.color.chartColor = newValue
+            chartView.setNeedsDisplay()
         }
     }
     
@@ -129,7 +126,24 @@ extension EasyChartView {
             return chartView.property.color.touchedChartColor
         }
         set {
-            return chartView.property.color.touchedChartColor = newValue
+            chartView.property.color.touchedChartColor = newValue
+            chartView.setNeedsDisplay()
         }
+    }
+    
+    /// Determine chartview being animated
+    public var isAnimated: Bool {
+        get {
+            return chartView.property.isAnimated
+        }
+        set {
+            chartView.property.isAnimated = newValue
+            chartView.setNeedsDisplay()
+        }
+    }
+    
+    /// Draw again chart view
+    public func drawChart() {
+        chartView.setNeedsDisplay()
     }
 }

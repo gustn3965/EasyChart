@@ -11,7 +11,7 @@ import UIKit
 struct ChartProperty {
     var frame: CGRect
     var objects: [EasyChartObjectProtocol]
-    var isShowingImmediately: Bool
+    var isAnimated: Bool
     var color: EasyChartColor
     let key = "strokeEnd"
     
@@ -20,12 +20,12 @@ struct ChartProperty {
     
     init(frame: CGRect = .zero,
          objects: [EasyChartObjectProtocol],
-         isShowingImmediately: Bool = true,
+         isAnimated: Bool = true,
          color: EasyChartColor = EasyChartColor(chartColor: #colorLiteral(red: 0.83, green: 0.25, blue: 0.00, alpha: 1.00),
                                                 touchedChartColor: #colorLiteral(red: 0.22, green: 0.24, blue: 0.27, alpha: 1.00))) {
         self.frame = frame
         self.objects = objects
-        self.isShowingImmediately = isShowingImmediately
+        self.isAnimated = isAnimated
         self.color = color
         caculateMinMax()
     }

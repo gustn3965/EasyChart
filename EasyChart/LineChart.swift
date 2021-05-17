@@ -23,9 +23,7 @@ final class LineChart: UIView, ChartProtocol {
     }
 
     public override func draw(_ rect: CGRect) {
-        if property.isShowingImmediately {
-            drawChart()
-        }
+        drawChart()
     }
     
     required init?(coder: NSCoder) {
@@ -63,7 +61,9 @@ final class LineChart: UIView, ChartProtocol {
         }
         
         shapeLayers.defaultLayer.path = path.cgPath
-        shapeLayers.defaultLayer.add(shapeLayers.animation, forKey: property.key)
+        if property.isAnimated {
+            shapeLayers.defaultLayer.add(shapeLayers.animation, forKey: property.key)
+        }
     }
 
     /// Add touch gesture calling `detectTouch(gesture:)`
