@@ -6,13 +6,13 @@
 //
 
 import UIKit
-
+import Combine
 /// View is to draw `line-chart`
 final class BarChart: UIView, ChartProtocol {
     var shapeLayers: ChartShapeLayer
     var property: ChartProperty
-    var valueBox: Box = Box()
-    var rowBox: Box = Box()
+    var valuePublisher: PassthroughSubject<String?, Never> = PassthroughSubject()
+    var rowPublisher: PassthroughSubject<String?, Never> = PassthroughSubject()
     
     // MARK: - Method
     required init(context: ChartProperty) {

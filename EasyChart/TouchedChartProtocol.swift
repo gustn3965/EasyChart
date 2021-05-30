@@ -25,8 +25,8 @@ extension TouchedChartProtocol where Self: ChartProtocol {
             shapeLayers.defaultLayer.strokeColor = property.color.chartColor.cgColor
             shapeLayers.touchShapeLayer.path = nil
             shapeLayers.touchPointShapeLayer.path = nil
-            valueBox.value = nil
-            rowBox.value = nil
+            valuePublisher.send(" ")
+            rowPublisher.send(" ")
         default:
             drawWhenTouched(gesture: gesture)
         }
@@ -45,8 +45,8 @@ extension TouchedChartProtocol where Self: ChartProtocol {
             if (left...right).contains(location.x) {
                 drawLineWhenTouched(x: wid)
                 drawPointWhenTouched(x: wid, idx: i, wid: width)
-                valueBox.value = String(Float(property.objects[i].value))
-                rowBox.value = property.objects[i].row
+                valuePublisher.send(String(Float(property.objects[i].value)))
+                rowPublisher.send(property.objects[i].row)
             }
             wid+=width*2
         }

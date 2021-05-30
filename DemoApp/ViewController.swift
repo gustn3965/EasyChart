@@ -54,10 +54,12 @@ class ViewController: UIViewController {
         easyBarChartView.isAnimated = true
         easyBarChartView.objects = [(0,"7/01"),(30,"7/02"),(5,"7/03"),(50,"7/04"),(35,"7/05"),(20,"7/06"),(80,"7/07"),(95,"7/08"),(65,"7/09"),(30,"7/10"),(43,"7/11"),(230,"7/12"),(110,"7/13"),(75,"7/14"),(80,"7/15"),(150,"7/16"),(0,"7/01"),(30,"7/02"),(5,"7/03"),(50,"7/04"),(35,"7/05")].map{Object(value: $0.0, row: $0.1)}
         easyBarChartView.chartColor = .black
-        
+        easyBarChartView.touchedChartColor = .gray
+
         easyLineChartView.isAnimated = true
         easyLineChartView.objects = [(0,"7/01"),(30,"7/02"),(5,"7/03"),(50,"7/04"),(35,"7/05"),(20,"7/06"),(80,"7/07"),(95,"7/08"),(65,"7/09"),(30,"7/10"),(43,"7/11"),(230,"7/12"),(110,"7/13"),(75,"7/14"),(80,"7/15"),(150,"7/16"),(0,"7/01"),(30,"7/02"),(5,"7/03"),(50,"7/04"),(35,"7/05")].map{Object(value: $0.0, row: $0.1)}
         easyLineChartView.chartColor = .black
+        easyLineChartView.touchedChartColor = .gray
     }
 }
 

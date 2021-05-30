@@ -6,7 +6,7 @@
 
 
 import UIKit
-
+import Combine
 /// View that has `chartView` and `2 labels` to show value and row
 /// - chartView:  chart
 /// - valueLabel: label to show value in `top left`
@@ -22,6 +22,9 @@ final public class EasyChartView: UIView {
     }()
     public var valueLabel = UILabel()
     public var rowLabel = UILabel()
+    
+    private var valueCancellable: AnyCancellable?
+    private var rowCancellable: AnyCancellable?
     
     // MARK: - init Method
     /// - Parameters:
@@ -52,9 +55,9 @@ final public class EasyChartView: UIView {
         horizonStack.axis = .horizontal
         stackView.addArrangedSubview(horizonStack)
         stackView.addArrangedSubview(chartView)
-        valueLabel.textColor = .clear
+        valueLabel.textColor = .black
         valueLabel.textAlignment = .right
-        rowLabel.textColor = .clear
+        rowLabel.textColor = .black
         rowLabel.textAlignment = .left
         valueLabel.text = " "
         rowLabel.text = " "
@@ -70,28 +73,20 @@ final public class EasyChartView: UIView {
              stackView.bottomAnchor.constraint(equalTo: bottomAnchor)])
     }
     
+    /// Use Combine subject to assign value on label.
     private func addObserver() {
-        chartView.valueBox.addObserver(observer: { [weak self] valueTitle in
-            guard let title = valueTitle else {
-                self?.valueLabel.textColor = .clear
-                return
-            }
-            self?.valueLabel.text = title
-            self?.valueLabel.textColor = .black
-        })
-
-        chartView.rowBox.addObserver(observer: { [weak self] rowTitle in
-            guard let row = rowTitle else {
-                self?.rowLabel.textColor = .clear
-                return
-            }
-            self?.rowLabel.text = row
-            self?.rowLabel.textColor = .black
-        })
+        valueCancellable = chartView.valuePublisher
+            .assign(to: \.text, on: valueLabel)
+        rowCancellable = chartView.rowPublisher
+            .assign(to: \.text, on: rowLabel)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        print("EashcahrtView dead ")
     }
 }
 

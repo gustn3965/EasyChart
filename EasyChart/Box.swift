@@ -8,18 +8,19 @@
 import Foundation
 
 /// Box is to publish value to observer when chart is touched.
-final public class Box {
+/// ❌ No longer used. Instead of Box, use Combine.
+final class Box {
     var value: String? {
         didSet {
             observer?(value)
         }
     }
     
-    public init() { }
+    init() { }
 
     private var observer: ((String?) -> Void)?
     
-    public func addObserver(observer: @escaping (String?) -> Void) {
+    func addObserver(observer: @escaping (String?) -> Void) {
         self.observer = observer
     }
 }

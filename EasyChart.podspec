@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "EasyChart"
-  spec.version      = "0.2.6"
+  spec.version      = "0.2.7"
   spec.swift_version = "5.0"
   
   spec.summary      = "Creating simple chart"
